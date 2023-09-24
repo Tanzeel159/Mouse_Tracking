@@ -6,15 +6,54 @@ body {
 
 #tracker {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 20px; /* Adjust top position for spacing */
+    right: 20px; /* Position in the top-right corner */
+    padding: 5px 10px; /* Add padding to the box */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 16px; /* Adjust font size */
+    border: 2px solid #000; /* 2px black border */
     user-select: none;
+    z-index: 2; /* Ensure it's above other elements */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #000; /* Add a border to the canvas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+#clearButton {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+#clearButton:hover {
+    background-color: #ff4500;
+}
+
+#colorPicker {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    z-index: 2;
+}
+
+#lineThickness {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
 }
